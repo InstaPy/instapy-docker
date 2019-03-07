@@ -5,7 +5,7 @@
 
 
 * Start all the containers (selenium + InstaPy)
-`docker-compose up -d --build
+`docker-compose up -d --build`
 * Start only selenium container
 `docker-compose up -d --build selenium`
 * Start only InstaPy container
