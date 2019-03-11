@@ -1,7 +1,6 @@
 version: '3'
 services:
   web:
-    container_name: instapy_web
     environment:
       - PYTHONUNBUFFERED=0
       - INSTAPY_WORKSPACE=/code/InstaPy
@@ -13,8 +12,7 @@ services:
     volumes:
       - ./:/code
   selenium:
-    container_name: instapy_selenium
-    image: selenium/standalone-chrome-debug
+    image: selenium/standalone-chrome
     ports:
       - "5900:5900"
     shm_size: 128M
