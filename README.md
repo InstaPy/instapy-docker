@@ -2,22 +2,31 @@
 
 ## How to use InstaPy with docker-compose
 
-* clone this repository and `cd docker-compose`
-* remove `.example` from quickstart or create your own quickstart file
-	* make sure you name it `docker_quickstart.py`
+* Clone this repository
+<br>`git clone https://github.com/InstaPy/instapy-docker.git`
+* Change your directory to docker-compose
+<br>`cd docker-compose`
+* Copy the example file to get started
+<br>`cp -a docker_quickstart.py.example docker_quickstart.py`
+* Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.
+  - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
+  - [Some quickstart examples](https://github.com/InstaPy/instapy-quickstart/tree/master/quickstart_templates)
 * Start all the containers (selenium + InstaPy)
-`docker-compose up -d --build`
+<br>`docker-compose pull && docker-compose up -d --build`
 * Start only selenium container
-`docker-compose up -d --build selenium`
+<br>`docker-compose pull && docker-compose up -d --build selenium`
 * Start only InstaPy container
-`docker-compose up -d --build web`
+<br>`docker-compose pull && docker-compose up -d --build web`
 * Stop all container
-`docker-compose stop`
+<br>`docker-compose stop`
 * Stop only selenium container
-`docker-compose stop selenium`
+<br>`docker-compose stop selenium`
 * Stop only InstaPy container
-`docker-compose stop web`
+<br>`docker-compose stop web`
 * Stop and remove Docker configs for all containers
-`docker-compose down`
+<br>`docker-compose down`
 * Display InstaPy output logs
-`docker logs -f instapy_web_1` or `docker logs --tail 80 -f $(docker ps -a | grep instapy_web | cut -d " " -f 1)`
+<br>`docker logs -f instapy_web_1` or `docker logs --tail 50 -f $(docker ps -a | grep instapy_web | cut -d " " -f 1)`
+* Automatically run InstaPy or run it at a speified time (Example below: run it everyday at 8:30AM)
+  - Edit your crontab
+  - Add `30 8 * * * root docker-compose -f /path_of_repo/docker-compose/docker-compose.yml up -d --build`
