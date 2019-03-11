@@ -1,0 +1,5 @@
+# Ignore InstaPy directory
+InstaPy
+
+# Ignore docker_quickstart.py
+docker_quickstart.py

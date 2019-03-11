@@ -1,4 +1,5 @@
 FROM python:3.7-slim-stretch
+WORKDIR /code
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests \
       wget \
@@ -11,4 +12,4 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-CMD ["./code/build/entrypoint.sh", "http://selenium:4444/wd/hub", "--", "python", "/code/docker_quickstart.py"]
+CMD ["./build/entrypoint.sh", "http://selenium:4444/wd/hub", "python", "docker_quickstart.py"]
