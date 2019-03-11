@@ -1,6 +1,6 @@
 # InstaPy-Docker
 
-## How to use InstaPy with Docker and docker-compose. Find below some basics commands
+## How to use InstaPy with docker-compose
 
 * clone this repository and `cd docker-compose`
 * remove `.example` from quickstart or create your own quickstart file
