@@ -2,8 +2,9 @@
 
 ## How to use InstaPy with Docker and docker-compose. Find below some basics commands
 
-
-
+* clone this repository and `cd docker-compose`
+* remove `.example` from quickstart or create your own quickstart file
+	* make sure you name it `docker_quickstart.py`
 * Start all the containers (selenium + InstaPy)
 `docker-compose up -d --build`
 * Start only selenium container

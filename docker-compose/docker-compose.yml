@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    #container_name: instapy_web
+    container_name: instapy_web
     environment:
       - PYTHONUNBUFFERED=0
       - INSTAPY_WORKSPACE=/code/InstaPy
@@ -13,7 +13,7 @@ services:
     volumes:
       - ./:/code
   selenium:
-    #container_name: instapy_selenium
+    container_name: instapy_selenium
     image: selenium/standalone-chrome-debug
     ports:
       - "5900:5900"
