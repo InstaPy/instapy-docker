@@ -5,7 +5,7 @@ RUN apt-get update \
       wget \
       gcc \
       g++ \
-    && pip install --no-cache-dir instapy \
+    && pip install --no-cache-dir -U instapy \
     && apt-get purge -y --auto-remove \
       gcc \
       g++ \
