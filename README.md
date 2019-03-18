@@ -28,5 +28,5 @@
 * Display InstaPy output logs
 <br>`docker logs -f instapy_web_1` or `docker logs --tail 50 -f $(docker ps -a | grep instapy_web | cut -d " " -f 1)`
 * Automatically run InstaPy or run it at a speified time (Example below: run it everyday at 8:30AM)
-  - Edit your crontab
-  - Add `30 8 * * * root docker-compose -f /path_of_repo/docker-compose/docker-compose.yml up -d --build`
+  - Edit your crontab file
+  - Add `30 8 * * * root cd /path_of_repo/docker-compose/ && docker-compose -f docker-compose.yml up -d --build`
