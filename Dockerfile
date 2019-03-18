@@ -13,9 +13,8 @@ RUN apk --update --no-cache add \
   chromium \
   chromium-chromedriver \
   libstdc++ \
-  python3
-
-RUN apk add --update --no-cache --virtual .build-dependencies \
+  python3 \
+  && apk add --update --no-cache --virtual .build-dependencies \
   build-base \
   python3-dev \
   py3-pip \
