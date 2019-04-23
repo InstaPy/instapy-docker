@@ -11,6 +11,7 @@
 * Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.
   - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
   - [Some quickstart examples](https://github.com/InstaPy/instapy-quickstart/tree/master/quickstart_templates)
+* Start InstaPy container 
 <br>`docker-compose pull && docker-compose up -d --build web`
 * Stop InstaPy container
 <br>`docker-compose stop web`
