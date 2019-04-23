@@ -13,8 +13,4 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-<<<<<<< HEAD
 CMD ["python", "docker_quickstart.py"]
-=======
-CMD ["python", "docker_quickstart.py"]
->>>>>>> upstream/master
