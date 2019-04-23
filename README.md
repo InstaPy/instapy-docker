@@ -11,22 +11,14 @@
 * Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.
   - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
   - [Some quickstart examples](https://github.com/InstaPy/instapy-quickstart/tree/master/quickstart_templates)
-* Start all the containers (selenium + InstaPy)
-<br>`docker-compose pull && docker-compose up -d --build`
-* Start only selenium container
-<br>`docker-compose pull && docker-compose up -d --build selenium`
-* Start only InstaPy container
+* Start InstaPy container 
 <br>`docker-compose pull && docker-compose up -d --build web`
-* Stop all container
-<br>`docker-compose stop`
-* Stop only selenium container
-<br>`docker-compose stop selenium`
-* Stop only InstaPy container
+* Stop InstaPy container
 <br>`docker-compose stop web`
-* Stop and remove Docker configs for all containers
+* Stop and remove Docker configs
 <br>`docker-compose down`
 * Display InstaPy output logs
 <br>`docker logs -f instapy_web_1` or `docker logs --tail 50 -f $(docker ps -a | grep instapy_web | cut -d " " -f 1)`
 * Automatically run InstaPy or run it at a speified time (Example below: run it everyday at 8:30AM)
   - Edit your crontab file
-  - Add `30 8 * * * root cd /path_of_repo/docker-compose/ && docker-compose -f docker-compose.yml up -d --build`
+  - Add `30 8 * * * root cd /path_to_repo/docker-compose/ && docker-compose up -d --build`

@@ -1,18 +1,13 @@
 version: '3'
 services:
   web:
+    container_name: "${COMPOSE_PROJECT_NAME}_web"
+    env_file: .env
     environment:
       - PYTHONUNBUFFERED=0
       - INSTAPY_WORKSPACE=/code/InstaPy
     build:
       context: .
       dockerfile: ./build/Dockerfile
-    depends_on:
-      - selenium
     volumes:
       - ./:/code
-  selenium:
-    image: selenium/standalone-chrome
-    ports:
-      - "5900:5900"
-    shm_size: 128M
