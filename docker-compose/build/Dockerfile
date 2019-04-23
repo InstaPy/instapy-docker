@@ -5,6 +5,7 @@ RUN apt-get update \
       wget \
       gcc \
       g++ \
+      chromedriver \
     && pip install --no-cache-dir -U instapy \
     && apt-get purge -y --auto-remove \
       gcc \
@@ -12,4 +13,4 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-CMD ["./build/entrypoint.sh", "http://selenium:4444/wd/hub", "python", "docker_quickstart.py"]
+CMD ["python", "docker_quickstart.py"]
