@@ -1,4 +1,9 @@
-# InstaPy-Docker 
+# InstaPy-Docker 🐳
+[![MIT license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/timgrossmann/InstaPy/blob/master/LICENSE)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/instapy/instapy.svg)
+[![Docker Pulls](https://img.shields.io/docker/pulls/instapy/instapy.svg)
+[![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](#backers)
+[![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](#sponsors)
 
 # Table of contents
 1. [Running InstaPy with docker](#docker)
