@@ -9,7 +9,13 @@
   - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
   - [Some quickstart examples](https://github.com/InstaPy/instapy-quickstart/tree/master/quickstart_templates)
 * Start InstaPy container
-<br>`docker pull instapy/instapy && docker run --name instapy_web -v /path_to_file/docker_quickstart.py:/code/docker_quickstart.py -d instapy_web`
+<br>`docker pull instapy/instapy && docker run --name instapy -v /path_to_file/docker_quickstart.py:/code/docker_quickstart.py -d instapy`
+* Stop InstaPy container
+<br>`docker stop instapy`
+* Remove InstaPy container
+<br>`docker rm instapy`
+* Display InstaPy output logs
+<br>`docker logs -f instapy` or `docker logs --tail 50 -f $(docker ps -a | grep instapy | cut -d " " -f 1)`
 
 ## How to use InstaPy with docker-compose <a name="docker-compose"></a>
 
