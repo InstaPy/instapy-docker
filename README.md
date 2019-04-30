@@ -1,12 +1,23 @@
-# InstaPy-Docker
+# InstaPy-Docker 
 
-## How to use InstaPy with docker-compose
+# Table of contents
+1. [Running with docker](#docker)
+2. [Running with docker-compose](#docker-compose)
+## How to use InstaPy with docker <a name="docker"></a>
+* Copy the quickstart example file from docker-compose directory to get started
+* Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.
+  - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
+  - [Some quickstart examples](https://github.com/InstaPy/instapy-quickstart/tree/master/quickstart_templates)
+* Start InstaPy container
+<br>`docker pull instapy/instapy && docker run --name instapy_web -v /path_to_file/docker_quickstart.py:/code/docker_quickstart.py -d instapy_web`
+
+## How to use InstaPy with docker-compose <a name="docker-compose"></a>
 
 * Clone this repository
 <br>`git clone https://github.com/InstaPy/instapy-docker.git`
 * Change your directory to docker-compose
 <br>`cd docker-compose`
-* Copy the example file to get started
+* Copy the quickstart example file to get started
 <br>`cp -a docker_quickstart.py.example docker_quickstart.py`
 * Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.
   - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
