@@ -1,9 +1,10 @@
 # InstaPy-Docker 🐳
 [![MIT license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/timgrossmann/InstaPy/blob/master/LICENSE)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/instapy/instapy.svg)](https://img.shields.io/docker/cloud/build/instapy/instapy.svg)
-[![Docker Pulls](https://img.shields.io/docker/pulls/instapy/instapy.svg)](https://img.shields.io/docker/pulls/instapy/instapy.svg)
-[![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](#sponsors)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy/builds)
+[![Docker Pulls](https://img.shields.io/docker/pulls/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy)
+[![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](https://github.com/timgrossmann/InstaPy#backers)
+[![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](https://github.com/timgrossmann/InstaPy#sponsors)
+[![Discord](https://img.shields.io/discord/510385886869979136.svg)](https://discord.gg/FDETsht)
 
 # Table of contents
 1. [Running InstaPy with docker](#docker)
