@@ -17,9 +17,9 @@
 * Start InstaPy container
 ```
 docker pull instapy/instapy && \
-docker run \
-  --name instapy \
-  -v /path_to_file/docker_quickstart.py:/code/docker_quickstart.py \
+docker run --name instapy \
+  -v /path_to_file/docker_quickstart.py:/code/docker_quickstart.py
+  -v /path_to_file/InstaPy:/code/InstaPy
   -d instapy
 ```
 * Stop InstaPy container
