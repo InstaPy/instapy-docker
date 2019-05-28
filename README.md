@@ -11,7 +11,7 @@
 1. [Running InstaPy with docker](#docker)
 2. [Running InstaPy with docker-compose](#docker-compose)
 ## Running InstaPy with docker <a name="docker"></a>
-* If you previously ran `InstaPy` the classical way you have to mount Instapy logs folder, which is by default saved in your home directory `~/InstaPy`, into the container otherwise you will loose all your previous data
+* If you previously ran `InstaPy` the classical way you have to mount `InstaPy` logs folder, which is by default saved in your home directory `~/InstaPy`, into the container otherwise you will loose all your previous data
 * Copy the quickstart example file from `docker-compose` directory to get started
 * Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.
   - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
@@ -46,7 +46,7 @@ docker run --name instapy \
 <br>`git clone https://github.com/InstaPy/instapy-docker.git`
 * Change your directory to docker-compose
 <br>`cd docker-compose`
-* If you previously ran `InstaPy` the classical way you have to move Instapy logs folder, which is by default saved in your home directory `~/InstaPy`, into the current folder otherwise you will loose all your previous data
+* If you previously ran `InstaPy` the classical way you have to move `InstaPy` logs folder, which is by default saved in your home directory `~/InstaPy`, into the current folder otherwise you will loose all your previous data
 <br>`mv ~/InstaPy .`
 * Copy the quickstart example file to get started
 <br>`cp -a docker_quickstart.py.example docker_quickstart.py`
