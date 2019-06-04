@@ -2,6 +2,7 @@
 [![MIT license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/timgrossmann/InstaPy/blob/master/LICENSE)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy/builds)
 [![Docker Pulls](https://img.shields.io/docker/pulls/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/herrox/InstaPy%2Fipy-pipeline?key=eyJhbGciOiJIUzI1NiJ9.NWNlOTVmYzExYjEzYzk2ZjU5ZmE4YTVm.tsHA-_oMEoxruRVJjh-6iIzW4YSuIN2cAcFwzzeEWkE&type=cf-1)]( https://g.codefresh.io/pipelines/ipy-pipeline/builds?filter=trigger:build~Build;pipeline:5ce9607b2c6f57816a2aa801~ipy-pipeline)
 [![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](https://github.com/timgrossmann/InstaPy#backers)
 [![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](https://github.com/timgrossmann/InstaPy#sponsors)
 [![Discord](https://img.shields.io/discord/510385886869979136.svg)](https://discord.gg/FDETsht)
@@ -10,6 +11,7 @@
 1. [Running InstaPy with docker](#docker)
 2. [Running InstaPy with docker-compose](#docker-compose)
 ## Running InstaPy with docker <a name="docker"></a>
+* If you previously ran `InstaPy` the classical way you have to mount `InstaPy` logs folder, which is by default saved in your home directory `~/InstaPy`, into the container otherwise you will loose all your previous data
 * Copy the quickstart example file from `docker-compose` directory to get started
 * Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.
   - [Complete functions documentation](https://github.com/timgrossmann/InstaPy#documentation)
@@ -22,6 +24,15 @@ docker run --name instapy \
   -v /absolute_path_to_file/InstaPy:/code/InstaPy \
   -d instapy/instapy
 ```
+Example:
+```
+docker pull instapy/instapy && \
+docker run --name instapy \
+  -v /home/myuser/docker_quickstart.py:/code/docker_quickstart.py \
+  -v /home/myuser/InstaPy:/code/InstaPy \
+  -d instapy/instapy
+```
+
 * Stop InstaPy container
 <br>`docker stop instapy`
 * Remove InstaPy container
@@ -35,6 +46,8 @@ docker run --name instapy \
 <br>`git clone https://github.com/InstaPy/instapy-docker.git`
 * Change your directory to docker-compose
 <br>`cd docker-compose`
+* If you previously ran `InstaPy` the classical way you have to move `InstaPy` logs folder, which is by default saved in your home directory `~/InstaPy`, into the current folder otherwise you will loose all your previous data
+<br>`mv ~/InstaPy .`
 * Copy the quickstart example file to get started
 <br>`cp -a docker_quickstart.py.example docker_quickstart.py`
 * Edit the file `docker_quicktart.py` to personalize how InstaPy will interact. All functions are the same than the classic installation mode. If you are **new** to InstaPy, **we strongly suggest to have a look to InstaPy documentation** to fully understand this file and how to modify it. Keep in mind all InstaPy functions should start with `bot.` when running with Docker.

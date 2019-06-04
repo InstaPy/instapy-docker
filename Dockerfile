@@ -1,4 +1,4 @@
-FROM python:3.7-slim-stretch 
+FROM python:3.7-slim-stretch
 WORKDIR /code
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests \
@@ -6,7 +6,7 @@ RUN apt-get update \
       gcc \
       g++ \
       chromedriver \
-    && pip install --no-cache-dir -U instapy \
+    && pip install --no-cache-dir -U -r requirements.txt \
     && apt-get purge -y --auto-remove \
       gcc \
       g++ \
