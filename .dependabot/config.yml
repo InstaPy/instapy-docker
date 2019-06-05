@@ -5,5 +5,5 @@ update_configs:
     directory: "/"
     update_schedule: "live"
     automerged_updates:
-    - match:
-      update_type: "all"
+      - match:
+        update_type: "all"
