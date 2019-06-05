@@ -1,4 +1,0 @@
-#!/bin/bash
-tag=$(curl -sf https://raw.githubusercontent.com/InstaPy/instapy-docker/master/requirements.txt | cut -d "=" -f 3)
-git tag v$tag
-git push origin v$tag

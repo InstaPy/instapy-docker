@@ -6,11 +6,12 @@ RUN apt-get update \
       gcc \
       g++ \
       chromedriver \
-    && pip install --no-cache-dir -U -r requirements.txt \
+    && wget -O '/tmp/requirements.txt' https://raw.githubusercontent.com/InstaPy/instapy-docker/master/requirements.txt \
+    && pip install --no-cache-dir -U -r /tmp/requirements.txt \
     && apt-get purge -y --auto-remove \
       gcc \
       g++ \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* /tmp/requirements.txt
 
 CMD ["python", "docker_quickstart.py"]
