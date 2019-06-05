@@ -2,7 +2,6 @@
 [![MIT license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/timgrossmann/InstaPy/blob/master/LICENSE)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy/builds)
 [![Docker Pulls](https://img.shields.io/docker/pulls/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy)
-[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/herrox/InstaPy%2Fipy-pipeline?key=eyJhbGciOiJIUzI1NiJ9.NWNlOTVmYzExYjEzYzk2ZjU5ZmE4YTVm.tsHA-_oMEoxruRVJjh-6iIzW4YSuIN2cAcFwzzeEWkE&type=cf-1)]( https://g.codefresh.io/pipelines/ipy-pipeline/builds?filter=trigger:build~Build;pipeline:5ce9607b2c6f57816a2aa801~ipy-pipeline)
 [![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](https://github.com/timgrossmann/InstaPy#backers)
 [![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](https://github.com/timgrossmann/InstaPy#sponsors)
 [![Discord](https://img.shields.io/discord/510385886869979136.svg)](https://discord.gg/FDETsht)
