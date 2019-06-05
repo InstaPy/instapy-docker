@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+# Parse InstaPy version
+tag=$(curl -sf https://raw.githubusercontent.com/InstaPy/instapy-docker/master/requirements.txt | cut -d "=" -f 3)
+
+# Tag and push image for additional tag
+docker tag $IMAGE_NAME $DOCKER_REPO:$tag
+docker push $DOCKER_REPO:$tag
