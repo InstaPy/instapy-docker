@@ -4,3 +4,6 @@ update_configs:
   - package_manager: "python"
     directory: "/"
     update_schedule: "live"
+    automerged_updates:
+    - match:
+      update_type: "all"
