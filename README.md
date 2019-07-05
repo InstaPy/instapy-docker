@@ -17,19 +17,19 @@
   - [Some quickstart examples](https://github.com/InstaPy/instapy-quickstart/tree/master/quickstart_templates)
 * Start InstaPy container
 ```
-docker pull instapy/instapy && \
+docker pull instapy/instapy:latest && \
 docker run --name instapy \
   -v /absolute_path_to_file/docker_quickstart.py:/code/docker_quickstart.py \
   -v /absolute_path_to_file/InstaPy:/code/InstaPy \
-  -d instapy/instapy
+  -d instapy/instapy:latest
 ```
 Example:
 ```
-docker pull instapy/instapy && \
+docker pull instapy/instapy:latest && \
 docker run --name instapy \
   -v /home/myuser/docker_quickstart.py:/code/docker_quickstart.py \
   -v /home/myuser/InstaPy:/code/InstaPy \
-  -d instapy/instapy
+  -d instapy/instapy:latest
 ```
 
 * Stop InstaPy container
@@ -38,6 +38,8 @@ docker run --name instapy \
 <br>`docker rm instapy`
 * Display InstaPy output logs
 <br>`docker logs -f instapy` or `docker logs --tail 50 -f $(docker ps -a | grep instapy | cut -d " " -f 1)`
+* Using specific version of InstaPy
+<br>By default, you will use the latest version of InstaPy. For some reasons, if you want to run a specific version you could with adapting the starting command (see above) by replacing both `latest` with the desire released version of InstaPy. It will then start a container of InstaPy with the corresponding version.
 
 ## Running InstaPy with docker-compose <a name="docker-compose"></a>
 
@@ -63,3 +65,5 @@ docker run --name instapy \
 * Automatically run InstaPy or run it at a speified time (Example below: run it everyday at 8:30AM)
   - Edit your crontab file
   - Add `30 8 * * * root cd /path_to_repo/docker-compose/ && docker-compose up -d --build`
+* Using specific version of InstaPy
+<br>By default, you will use the latest version of InstaPy. For some reasons, if you want to run a specific version you have to edit `docker-compose.yml`file and replace `latest` with the desire released version in the line `image: instapy/instapy:latest`. It will then start a container of InstaPy with the corresponding version. 
