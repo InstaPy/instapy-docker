@@ -1,0 +1,24 @@
+FROM arm32v7/python:rc-alpine
+
+RUN [ "cross-build-start" ]
+
+WORKDIR /code
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends --no-install-suggests \
+      wget \
+      gcc \
+      g++ \
+      ca-certificates \
+      chromedriver
+      
+RUN wget -O '/tmp/requirements.txt' https://raw.githubusercontent.com/InstaPy/instapy-docker/master/requirements.txt \
+    && pip install --no-cache-dir -U -r /tmp/requirements.txt
+    
+RUN apt-get purge -y --auto-remove \
+      gcc \
+      g++ \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/requirements.txt
+
+CMD ["python", "docker_quickstart.py"]
+RUN [ "cross-build-end" ]
