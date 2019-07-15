@@ -12,7 +12,7 @@ RUN apt-get update \
       chromedriver
       
 RUN wget -O '/tmp/requirements.txt' https://raw.githubusercontent.com/InstaPy/instapy-docker/master/requirements.txt \
-    && pip install --no-cache-dir -U -r /tmp/requirements.txt
+    && pip3 install --no-cache-dir -U -r /tmp/requirements.txt
     
 RUN apt-get purge -y --auto-remove \
       gcc \
