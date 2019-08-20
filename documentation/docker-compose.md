@@ -6,6 +6,7 @@
 - [Stop InstaPy container](#stop-instapy-container)
 - [Stop and remove InstaPy docker config](#stop-and-remove-instapy-docker-config)
 - [Display InstaPy output logs](#display-instapy-output-logs)
+- [Automatically run Instapy or at a specific time](#automatically-run-instapy-or-run-it-at-a-specified-time)
 - [Deploy specific version of InstaPy](#deploy-specific-version-of-instapy)
 
 ---
@@ -57,10 +58,12 @@ docker logs -f instapy_web_1
 docker logs --tail 50 -f $(docker ps -a | grep instapy_web | cut -d " " -f 1)
 ```
 
-## Automatically run InstaPy or run it at a speified time
+## Automatically run InstaPy or run it at a specified time
 Use cron to run InstaPy automatically at a specific time. Example below: run it everyday at 8:30AM
 * Edit your crontab file
 * Add `30 8 * * * root cd /path_to_repo/docker-compose/ && docker-compose up -d
 
-## Using specific version of InstaPy
-By default, you will use the latest version of InstaPy. For some reasons, if you want to run a specific version you could with adapting the starting command (see above) by replacing tag `latest` with the desire released version of InstaPy.It will then start a container of InstaPy with the corresponding version. Please be aware breaking chanes may exist between version and refers to the changelog of InstaPy to adapt your quickstart file.
+## Deploy specific version of InstaPy
+By default, you will use the latest version of InstaPy. For some reasons, if you want to run a specific version you could with adapting the starting command (see above) by replacing tag `latest` with the desire released version of InstaPy.
+
+It will then start a container of InstaPy with the corresponding version. Please be aware breaking chanes may exist between version and refers to the changelog of InstaPy to adapt your quickstart file.
