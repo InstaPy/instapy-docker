@@ -13,8 +13,6 @@
   - [Running InstaPy with docker](https://github.com/Herrox/instapy-docker/documentation/docker.md)
   - [Running InstaPy with docker-compose](https://github.com/Herrox/instapy-docker/documentation/docker-compose.md)
 
-<br />
-
 ---
 
 ## Presentation
@@ -23,7 +21,9 @@ This is the docker version of [InstaPy](https://github.com/timgrossmann/InstaPy)
   - docker-compose
 
 Both version used the same docker image hosted by the Docker Hub registry. We want to propose these two approaches, depending of everyone's preferences.
+
 Tags used by image always refers to the corresponding version of InstaPy. Example: `instapy:0.6.1` is for InstaPy released version `0.6.1`.
+
 The `latest`tag refers to the latest released version of InstaPy
 
 ## InstaPy documentation
@@ -35,7 +35,7 @@ Some helpful links:
   - [InstaPy full documentation](https://github.com/timgrossmann/InstaPy/blob/master/DOCUMENTATION.md)
   - [How to contribute to InstaPy](https://github.com/InstaPy/instapy-docs)
 
-## Guides
+## Guides and documentation
 
-[Running InstaPy with docker](https://github.com/Herrox/instapy-docker/documentation/docker.md)
-[Running InstaPy with docker-compose]((https://github.com/Herrox/instapy-docker/documentation/docker-compose.md)
+  - [Running InstaPy with docker](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker.md)
+  - [Running InstaPy with docker-compose](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker-compose.md)
