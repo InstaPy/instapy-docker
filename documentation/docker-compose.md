@@ -61,7 +61,7 @@ docker logs --tail 50 -f $(docker ps -a | grep instapy_web | cut -d " " -f 1)
 ## Automatically run InstaPy or run it at a specified time
 Use cron to run InstaPy automatically at a specific time. Example below: run it everyday at 8:30AM
 * Edit your crontab file
-* Add `30 8 * * * root cd /path_to_repo/docker-compose/ && docker-compose up -d
+* Add `30 8 * * * root cd /path_to_repo/docker-compose/ && docker-compose up -d`
 
 ## Deploy specific version of InstaPy
 By default, you will use the latest version of InstaPy. For some reasons, if you want to run a specific version you could with adapting the starting command (see above) by replacing tag `latest` with the desire released version of InstaPy.
