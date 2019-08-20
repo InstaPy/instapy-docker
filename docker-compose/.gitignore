@@ -3,3 +3,6 @@ InstaPy
 
 # Ignore docker_quickstart.py
 docker_quickstart.py
+
+# Geckodriver log file
+geckodriver.log
