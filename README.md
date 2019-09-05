@@ -10,8 +10,8 @@
 - [Presentation](#presentation)
 - [InstaPy documentation](#instapy-documentation)
 - [Guides and documenation](#guides-and-documentation)
-  - [Running InstaPy with docker](https://github.com/Herrox/instapy-docker/documentation/docker.md)
-  - [Running InstaPy with docker-compose](https://github.com/Herrox/instapy-docker/documentation/docker-compose.md)
+  - [Running InstaPy with docker](https://github.com/InstaPy/instapy-docker/blob/master/documentation/docker.md)
+  - [Running InstaPy with docker-compose](https://github.com/InstaPy/instapy-docker/blob/master/documentation/docker-compose.md)
 
 ---
 
