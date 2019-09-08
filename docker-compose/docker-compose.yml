@@ -2,10 +2,10 @@ version: '3'
 services:
   web:
     image: instapy/instapy:latest
-    container_name: "${COMPOSE_PROJECT_NAME}_web"
-    env_file: .env
     environment:
       - PYTHONUNBUFFERED=0
       - INSTAPY_WORKSPACE=/code/InstaPy
-    volumes:
-      - ./:/code
+      - SELENIUM=http://selenium:4444/wd/hub
+
+  selenium:
+    image: selenium/standalone-chrome:latest
