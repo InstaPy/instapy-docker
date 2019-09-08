@@ -39,3 +39,13 @@ Some helpful links:
 
   - [Running InstaPy with docker](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker.md)
   - [Running InstaPy with docker-compose](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker-compose.md)
+  
+## Building the image locally
+
+To build the docker image locally run the following script:
+
+```sh
+docker-compose -f docker-compose.yml -f docker-compose.build.yml build
+```
+
+This must be done once you move into `docker-compose` dir.
