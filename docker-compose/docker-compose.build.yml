@@ -2,5 +2,5 @@ version: '3'
 services:
   web:
     build:
-      dockerfile: ./build/Dockerfile
+      dockerfile: ./build/alpine.Dockerfile
       context: .
