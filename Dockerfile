@@ -16,8 +16,6 @@ RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/requirements.txt \
     # Disabling geckodriver log file
-    && sed -i "s#browser = webdriver.Firefox(#browser = webdriver.Firefox(service_log_path=os.devnull,#g" /usr/local/lib/python3.7/site-packages/instapy/browser.py \
-    # Fix Login A/B test detected error - https://github.com/timgrossmann/InstaPy/issues/4887#issuecomment-522290752
-    && sed -i "159s#a\[text#button\[text#g" /usr/local/lib/python3.7/site-packages/instapy/xpath_compile.py
-
+    && sed -i "s#browser = webdriver.Firefox(#browser = webdriver.Firefox(service_log_path=os.devnull,#g" /usr/local/lib/python3.7/site-packages/instapy/browser.py 
+ADD xpath_compile.py /usr/local/lib/python3.7/site-packages/instapy/xpath_compile.py
 CMD ["python", "docker_quickstart.py"]
