@@ -41,5 +41,3 @@ Some helpful links:
   - [Running InstaPy with docker-compose](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker-compose.md)
   
 
-**InstaPy is being sponsored by the following partner. Please help to support us by taking a look and signing up to a free trial 😊**
-<a href="https://tracking.gitads.io/?repo=InstaPy"> <img src="https://images.gitads.io/InstaPy" alt="GitAds"/> </a>
