@@ -1,1 +1,1 @@
-instapy==0.6.11
+instapy==0.6.12
