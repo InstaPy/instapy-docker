@@ -8,7 +8,7 @@ _The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
-Changed xpath_compile.py with changes from #5895 and #5899 InstaPy [0.6.13] - UNRELEASED
+Updated xpath_compile.py with changes from #5895 and #5899 InstaPy [0.6.13] - UNRELEASED
 
 ## [1.4] - 2019-08-20
 
