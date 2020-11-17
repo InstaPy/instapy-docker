@@ -2,7 +2,7 @@ from instapy import InstaPy
 from instapy.util import smart_run
 
 # Write your automation here
-# Stuck ? Look at the github page or the examples in the examples folder
+# Stuck? Look at the github page https://github.com/InstaPy/instapy-quickstart
 
 insta_username = ""
 insta_password = ""

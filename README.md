@@ -31,13 +31,14 @@ As mentioned above, docker image of InstaPy is built upon InstaPy released versi
 Otherwise, you could open an issue on this repo or ask for help on Discord on the dedicated channel #docker.
 
 Some helpful links:
+  - [InstaPy full documentation](https://instapy.org)
   - [InstaPy repository](https://github.com/timgrossmann/InstaPy)
-  - [InstaPy full documentation](https://github.com/timgrossmann/InstaPy/blob/master/DOCUMENTATION.md)
+  - [InstaPy Quickstart repository](https://github.com/InstaPy/instapy-quickstart)
   - [How to contribute to InstaPy](https://github.com/InstaPy/instapy-docs)
 
 ## Guides and documentation
 
   - [Running InstaPy with docker](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker.md)
   - [Running InstaPy with docker-compose](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker-compose.md)
-  
+
 
