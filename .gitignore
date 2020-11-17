@@ -3,7 +3,7 @@ docker-compose/InstaPy
 InstaPy
 
 # Ignore docker_quickstart.py
-docker-compose/docker_quickstart.py
+**/docker_quickstart.py
 docker_quickstart.py
 
 # Geckodriver log file
