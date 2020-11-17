@@ -10,7 +10,6 @@ _The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - Updated xpath_compile.py with changes from #5895 and #5899 InstaPy [0.6.13] - UNRELEASED
 - Removed xpath_compile.py dependency from InstaPy repo.
-- Removed unused requirements.txt file.
 - Removed `build` path from docker-compose directory.
 - Dockerfile fix `webdriverdownloader` via `sed` in generic form, no line number dependency.
 - Renamed `docker_quickstart.py.example` to `docker_quickstart.py`.
