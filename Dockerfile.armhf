@@ -3,7 +3,6 @@ WORKDIR /code
 RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian.org/debian buster main contrib non-free#g" /etc/apt/sources.list \
   && apt-get update \
   && apt-get install -y --no-install-recommends --no-install-suggests \
-  bzip2 \
   wget \
   gcc \
   g++ \
@@ -11,20 +10,31 @@ RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian
   # cryptography build dependencies
   libffi-dev \
   libssl-dev \
-  rustc \
-  cargo \
+  # for building geckodriver from source
+  curl \
+  unzip \
+  # cross-compiler toolchain
+  gcc-arm-linux-gnueabihf \
+  libc6-armhf-cross \
+  libc6-dev-armhf-cross \
+  # rust language for building cryptography and geckodriver
+  && curl https://sh.rustup.rs -sSf | sh -s -- -y \
+  && . $HOME/.cargo/env \
+  && rustup target install armv7-unknown-linux-gnueabihf \
+  && wget https://hg.mozilla.org/mozilla-central/archive/tip.zip \
+  && unzip tip.zip \
+  && mv mozilla-central-* mozilla-central \
+  && rm tip.zip \
+  && printf "[target.armv7-unknown-linux-gnueabihf]\nlinker = \"arm-linux-gnueabihf-gcc\"" >> mozilla-central/testing/geckodriver/.cargo/config \
+  && cd mozilla-central/testing/geckodriver \
+  && cargo build --release --target armv7-unknown-linux-gnueabihf \
+  && cd - \
+  && cp mozilla-central/target/armv7-unknown-linux-gnueabihf/release/geckodriver /usr/bin/ \
+  && rm -rf mozilla-central \
   && wget -O '/tmp/requirements.txt' https://raw.githubusercontent.com/InstaPy/instapy-docker/master/requirements.txt \
   && pip install --no-cache-dir -U -r /tmp/requirements.txt \
-  && apt-get purge -y --auto-remove \
-  gcc \
-  g++ \
-  bzip2 \
-  rustc \
-  cargo \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/requirements.txt \
   # Disabling geckodriver log file
   && sed -i "s#browser = webdriver.Firefox(#browser = webdriver.Firefox(service_log_path=os.devnull,#g" /usr/local/lib/python3.7/site-packages/instapy/browser.py \
-  # Fix webdriverdownloader not handling asc files
-  && sed -i "s#bitness in name]#bitness in name and name[-3:] != 'asc' ]#g" /usr/local/lib/python3.7/site-packages/webdriverdownloader/webdriverdownloader.py
 CMD ["python", "docker_quickstart.py"]
