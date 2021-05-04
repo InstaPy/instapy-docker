@@ -9,3 +9,4 @@ services:
       - INSTAPY_WORKSPACE=/code/InstaPy
     volumes:
       - ./:/code
+      ../login_util.py:/usr/local/lib/python3.7/site-packages/instapy/login_util.py
