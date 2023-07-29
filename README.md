@@ -1,22 +1,22 @@
 # InstaPy-Docker 🐳
-[![MIT license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/timgrossmann/InstaPy/blob/master/LICENSE)
+[![MIT license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/@StuartSwitzman/InstaPy/blob/StuartSwitzman/LICENSE)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy/builds)
 [![Docker Pulls](https://img.shields.io/docker/pulls/instapy/instapy.svg)](https://hub.docker.com/r/instapy/instapy)
-[![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](https://github.com/timgrossmann/InstaPy#backers)
-[![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](https://github.com/timgrossmann/InstaPy#sponsors)
-[![Discord](https://img.shields.io/discord/510385886869979136.svg)](https://discord.gg/FDETsht)
+[![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](https://github.com/StuartSwitzman/InstaPy#backers)
+[![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](https://github.com/StuartSwitzman/InstaPy#sponsors)
+[![Discord](https://img.shields.io/discord/510385886869979136.svg)](https://discord.gg/@StuartSwitzman)
 
 #### Table of contents
 - [Presentation](#presentation)
 - [InstaPy documentation](#instapy-documentation)
 - [Guides and documenation](#guides-and-documentation)
-  - [Running InstaPy with docker](https://github.com/InstaPy/instapy-docker/blob/master/documentation/docker.md)
-  - [Running InstaPy with docker-compose](https://github.com/InstaPy/instapy-docker/blob/master/documentation/docker-compose.md)
+  - [Running InstaPy with docker](https://github.com/InstaPy/instapy-docker/blob/StuartSwitzman/documentation/docker.md)
+  - [Running InstaPy with docker-compose](https://github.com/InstaPy/instapy-docker/blob/StuartSwitzman/documentation/docker-compose.md)
 
 ---
 
 ## Presentation
-This is the docker version of [InstaPy](https://github.com/timgrossmann/InstaPy) which is declined in two categories:
+This is the docker version of [InstaPy](https://github.com/StuartSwitzman/InstaPy) which is declined in two categories:
   - docker
   - docker-compose
 
@@ -32,13 +32,13 @@ Otherwise, you could open an issue on this repo or ask for help on Discord on th
 
 Some helpful links:
   - [InstaPy full documentation](https://instapy.org)
-  - [InstaPy repository](https://github.com/timgrossmann/InstaPy)
+  - [InstaPy repository](https://github.com/StuartSwitzman/InstaPy)
   - [InstaPy Quickstart repository](https://github.com/InstaPy/instapy-quickstart)
-  - [How to contribute to InstaPy](https://github.com/InstaPy/instapy-docs)
+  - [How to contribute to InstaPy](https://github.com/InstaPy/instapy-docs.md)
 
 ## Guides and documentation
 
-  - [Running InstaPy with docker](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker.md)
-  - [Running InstaPy with docker-compose](https://github.com/Herrox/instapy-docker/blob/master/documentation/docker-compose.md)
+  - [Running InstaPy with docker](https://github.com/@StuartSwitzman/instapy-docker/blob/StuartSwitzman/documentation/docker.md)
+  - [Running InstaPy with docker-compose](https://github.com/@StuartSwitzman/instapy-docker/blob/StuartSwitzman/documentation/docker-compose.md)
 
 
